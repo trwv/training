@@ -3,7 +3,7 @@ from tkinter import *
 # 窗口初始化
 win = Tk()
 win.title("盲打")
-win.geometry("500x200+400+100")
+win.geometry("300x120+500+100")
 
 # 记录变量
 num = 1
@@ -21,23 +21,23 @@ def chinese_dict(val):
         'G': "高空",
         'H': "回旋",
         'I': "i,i.i/",
-        'J': "急忙",
-        'K': "开出",
-        'L': "螺旋",
-        'M': "摩托",
-        'N': "哪知",
+        'J': "警察",
+        'K': "开枪",
+        'L': "连续",
+        'M': "命中",
+        'N': "农夫",
         'O': "偶遇",
-        'P': "朋友",
+        'P': "婆娘",
         'Q': "前来",
-        'R': "忍者",
-        'S': "射箭",
-        'T': "突然",
+        'R': "任性",
+        'S': "摔倒",
+        'T': "天真",
         'U': "u;u'",
         'V': "v[v]v\\",
         'W': "我们",
         'X': "向前",
         'Y': "乐器",
-        'Z': "再见"
+        'Z': "奏响"
     }[val]
 
 # 输入框回车处理函数
@@ -67,15 +67,15 @@ txt_entry = Variable()
 txt_entry.set("")
 
 # 字母显示
-lable = Label(win, textvariable = txt_A_to_Z)
+lable = Label(win, textvariable = txt_A_to_Z, font="宋体 20 bold")
 lable.pack()
 
 # 次数统计
-count = Label(win, textvariable = txt_count)
+count = Label(win, textvariable = txt_count, font="宋 15")
 count.pack()
 
 # 输入框
-entry = Entry(win, textvariable = txt_entry)
+entry = Entry(win, textvariable = txt_entry, font="宋体 20")
 entry.bind('<Return>', handler_return)
 entry.pack()
 
